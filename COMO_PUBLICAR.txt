@@ -1,0 +1,9 @@
+NOBRE FLIPBOOKS — INSTRUÇÕES
+1. Extraia o ZIP.
+2. Abra https://github.com/robertonobre22/flipbooks
+3. Em Add file > Upload files, envie TODOS os arquivos e a pasta atlas-das-brumas com sua estrutura interna preservada. Se seu navegador não enviar pastas, use a ferramenta web.github.dev ou faça upload dos arquivos separadamente, mantendo os caminhos.
+4. Confirme em Commit changes.
+5. Settings > Pages > Deploy from a branch > main > /(root) > Save.
+6. Teste: https://robertonobre22.github.io/flipbooks/
+7. Dentro do Atlas, faça uma resposta teste e clique em Baixar TXT.
+IMPORTANTE: este ZIP é um site estático completo; não envie o ZIP sem extrair.
