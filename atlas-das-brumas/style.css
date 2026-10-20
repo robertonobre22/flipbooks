@@ -574,3 +574,49 @@ body {
 
 }
 
+
+
+/* DRUSKENVALD — PRANCHA DUPLA RESPONSIVA */
+
+/* Computador: imagem completa, sem cortes */
+.spread:has(.illustration img[src$="druskenvald.webp"]) {
+  display: block;
+  min-height: 0;
+}
+
+.spread:has(.illustration img[src$="druskenvald.webp"]) .illustration {
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.spread:has(.illustration img[src$="druskenvald.webp"]) .illustration img {
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Preservar a descrição abaixo da prancha */
+.spread:has(.illustration img[src$="druskenvald.webp"]) .paper {
+  padding: clamp(20px, 3vw, 38px);
+}
+
+/* Tablet e celular: prancha inteira, adaptada à largura */
+@media (max-width: 1100px) {
+  .spread:has(.illustration img[src$="druskenvald.webp"]) .illustration img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Impressão */
+@media print {
+  .spread:has(.illustration img[src$="druskenvald.webp"]) .illustration img {
+    width: 100%;
+    height: auto;
+  }
+}
