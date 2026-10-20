@@ -1,143 +1,732 @@
 
-window.ATLAS_DOMINIOS = [
-  {
-    "id": "bluetspur",
-    "nome": "Bluetspur",
-    "genero": "Horror alienígena · paranoia · invasão mental",
-    "subtitulo": "Um domínio nas alturas",
-    "descricao": "Picos impossíveis cortam um céu de tempestades permanentes. Vozes estrangeiras se insinuam entre lembranças, e quem desaparece nem sempre volta igual. Ninguém sabe com certeza onde terminam seus próprios pensamentos e começam os de outra coisa.",
-    "temas": [
-      "Dominação psíquica e memórias incertas",
-      "Desaparecimentos e abduções",
-      "Criaturas alienígenas e experimentos",
-      "Exploração de regiões hostis"
-    ],
-    "aventuras": [
-      "Investigar pessoas desaparecidas",
-      "Percorrer ruínas e montanhas estranhas",
-      "Confrontar aberrações e ameaças desconhecidas",
-      "Descobrir o que é real quando a mente falha"
-    ],
-    "pergunta": "Se alguém alterasse suas memórias, como descobriria o que ainda é verdadeiro?"
-  },
-  {
-    "id": "darkon",
-    "nome": "Darkon",
-    "genero": "Fantasia sombria · ruína · esquecimento",
-    "subtitulo": "O reino em ruínas",
-    "descricao": "Cidades inteiras parecem à beira de desaparecer. Ruínas, facções rivais e documentos contraditórios povoam um território onde o passado perde contornos e a realidade parece esquecer a si mesma.",
-    "temas": [
-      "Decadência e lugares desaparecendo",
-      "Esquecimento e identidade",
-      "Necromancia e ambição política",
-      "A disputa pelo que deve sobreviver"
-    ],
-    "aventuras": [
-      "Explorar fortalezas esquecidas",
-      "Investigar distorções da realidade",
-      "Negociar com facções rivais",
-      "Tentar salvar aquilo que o mundo abandona"
-    ],
-    "pergunta": "O que do seu passado você se recusaria a esquecer, mesmo que todos os outros esquecessem?"
-  },
-  {
-    "id": "falkovnia",
-    "nome": "Falkovnia",
-    "genero": "Sobrevivência · guerra · cerco",
-    "subtitulo": "A guerra sem fim",
-    "descricao": "Muralhas se erguem diante de uma ameaça que parece nunca terminar. Comunidades exaustas tentam continuar vivendo entre ordens militares, escassez e o avanço de mortos-vivos. Cada amanhecer é conquistado com esforço.",
-    "temas": [
-      "Cerco e ameaça constante",
-      "Militarização e autoritarismo",
-      "Mortos-vivos e medo coletivo",
-      "Dever, liderança e sacrifício"
-    ],
-    "aventuras": [
-      "Defender cidades e civis",
-      "Organizar evacuações",
-      "Realizar missões em território hostil",
-      "Decidir a quem proteger quando não há tempo para tudo"
-    ],
-    "pergunta": "O que você sacrificaria para manter outras pessoas vivas por mais uma noite?"
-  },
-  {
-    "id": "dementlieu",
-    "nome": "Dementlieu",
-    "genero": "Horror psicológico · intriga · identidade",
-    "subtitulo": "Um domínio de máscaras",
-    "descricao": "Palácios e salões ocultam uma sociedade de aparências impecáveis, onde um erro de etiqueta pode custar muito mais que prestígio. Todos parecem representar um papel, e o preço da verdade pode ser a exclusão.",
-    "temas": [
-      "Intriga aristocrática",
-      "Máscaras e identidades fabricadas",
-      "Rejeição e controle social",
-      "Desejo, dever e aparência"
-    ],
-    "aventuras": [
-      "Infiltrar-se em bailes e salões",
-      "Investigar segredos e desaparecimentos",
-      "Negociar alianças e rivalidades",
-      "Escolher entre reputação e verdade"
-    ],
-    "pergunta": "O que você estaria disposto a fazer para manter as aparências que protegem alguém que ama?"
-  },
-  {
-    "id": "hazlan",
-    "nome": "Hazlan",
-    "genero": "Horror arcano · cataclismo · mutação",
-    "subtitulo": "Tempestades arcanas",
-    "descricao": "A magia corre solta por paisagens transformadas por experimentos perigosos. Em meio a ruínas e anomalias, o conhecimento promete salvação e ameaça exigir um preço que poucos estão dispostos a reconhecer.",
-    "temas": [
-      "Catástrofes arcanas",
-      "Experimentos sem limites",
-      "Mutações na natureza e nos corpos",
-      "Responsabilidade pelo poder"
-    ],
-    "aventuras": [
-      "Investigar desastres mágicos",
-      "Explorar zonas de realidade instável",
-      "Enfrentar experimentos alterados",
-      "Escolher quais conhecimentos devem sobreviver"
-    ],
-    "pergunta": "Até onde você iria pelo poder de corrigir um erro irreparável?"
-  },
-  {
-    "id": "innsmouth",
-    "nome": "Innsmouth",
-    "genero": "Horror cósmico · mar · culto",
-    "subtitulo": "Sussurros do abismo",
-    "descricao": "A névoa salobra cobre vilas costeiras. Nas águas profundas, ruínas e antigas histórias sobrevivem onde nenhuma luz alcança. O oceano guarda segredos que fazem a humanidade parecer pequena.",
-    "temas": [
-      "Comunidades isoladas e desconfiança",
-      "Segredos herdados pelo sangue",
-      "Cultos e ritos marítimos",
-      "O desconhecido nas profundezas"
-    ],
-    "aventuras": [
-      "Investigar povoados costeiros",
-      "Explorar ruínas submersas",
-      "Interromper ritos ameaçadores",
-      "Enfrentar criaturas e enigmas do mar"
-    ],
-    "pergunta": "Quando o desconhecido chamar pelo seu nome, o que o faria responder?"
-  },
-  {
-    "id": "druskenvald",
-    "nome": "Druskenvald",
-    "genero": "Horror folclórico brasileiro · causos · promessas · assombrações",
-    "subtitulo": "As cantigas que não terminam",
-    "descricao": "Nas aldeias de Druskenvald, as festas conservam cantigas antigas e as estradas guardam histórias que ninguém conta até o fim. Um assobio atravessa a mata antes do amanhecer. Sob a Lua Torta, promessas podem durar mais que uma vida — e há lugares onde todos sabem o preço de uma dívida, mas ninguém se atreve a dizer quem deve pagá-la.",
-    "temas": [
-      "Lendas brasileiras e assombrações nas estradas",
-      "Parlendas, presságios e segredos familiares",
-      "Festas populares, promessas e tradições antigas",
-      "Culpa, pertencimento e coragem de romper o silêncio"
-    ],
-    "aventuras": [
-      "Investigar causos e desaparecimentos nas aldeias",
-      "Atravessar matas e caminhos que mudam à noite",
-      "Descobrir os segredos por trás de festas e promessas",
-      "Proteger pessoas e escolher quais tradições transformar"
-    ],
-    "pergunta": "Você quebraria uma tradição que mantém sua comunidade viva se descobrisse quem paga por ela?"
+(() => {
+  'use strict';
+
+  const D = window.ATLAS_DOMINIOS;
+  const $ = s => document.querySelector(s);
+  const stage = $('#bookStage');
+  const KEY = 'atlasBrumas_v1';
+
+  const characters = [
+    'Lloyd', 'Aunilan', 'Kaelion', 'Ireena', 'Valerius'
+  ];
+
+  const initial = {
+    character: '', player: '', domains: [],
+    style: '', expectation: '', desired: '',
+    relationship: '', mystery: '', fears: '',
+    after: '', themes: '', boundaries: ''
+  };
+
+  let f = { ...initial };
+
+  try {
+    const stored = JSON.parse(localStorage.getItem(KEY) || '{}');
+    if (stored && typeof stored === 'object') {
+      f = { ...initial, ...stored };
+    }
+  } catch (e) {}
+
+  if (!Array.isArray(f.domains)) f.domains = [];
+
+  const pages = [
+    'Capa',
+    'Carta aos viajantes',
+    'Os sete domínios',
+    ...D.map(x => x.nome),
+    'Druskenvald — Lendas e desafios',
+    'Suas escolhas nas Brumas',
+    'O Livro dos Destinos',
+    'Sua carta ao Mestre'
+  ];
+
+  const domainStart = 3;
+  const legendsPage = 3 + D.length;
+  const choicesPage = legendsPage + 1;
+  const destinyPage = choicesPage + 1;
+  const letterPage = destinyPage + 1;
+
+  let page = 0;
+
+  const esc = s => String(s ?? '').replace(
+    /[&<>"']/g,
+    c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;',
+      '"': '&quot;', "'": '&#39;'
+    }[c])
+  );
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(f));
+    } catch (e) {}
   }
-];
+
+  function goto(n) {
+    page = Math.max(0, Math.min(pages.length - 1, n));
+    location.hash = 'pagina-' + (page + 1);
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function shell(title, content, eyebrow = 'ATLAS DAS BRUMAS') {
+    return `
+      <div class="fullpage">
+        <div class="eyebrow">${eyebrow}</div>
+        <h1>${title}</h1>
+        ${content}
+      </div>
+    `;
+  }
+
+  function domainPage(x, index) {
+    const isDruskenvald = x.id === 'druskenvald';
+
+    const image = isDruskenvald
+      ? 'assets/druskenvald-abertura.webp'
+      : `assets/${x.id}.webp`;
+
+    const desc = isDruskenvald
+      ? `Druskenvald é uma terra de contrastes.
+         Matas antigas cercam povoados onde as festas
+         atravessam gerações, enquanto caminhos de
+         terra se estendem por serras, rios e plantações.
+         A hospitalidade é uma virtude cultivada há
+         séculos, embora algumas casas recebam melhor
+         os desconhecidos do que seus próprios vizinhos.
+
+         Em suas aldeias, as pessoas conhecem histórias
+         que preferem não explicar. Crianças aprendem
+         parlendas antes de compreender o significado
+         das palavras. Famílias preservam costumes cuja
+         origem se perdeu, e certas promessas continuam
+         sendo cumpridas muito depois da morte de quem
+         as fez.
+
+         A vida segue entre colheitas, celebrações,
+         pequenas disputas e antigos compromissos.
+         Entretanto, quando os sinos anunciam a noite,
+         há estradas que deixam de ser percorridas e
+         perguntas que ninguém se dispõe a responder.`
+      : x.descricao;
+
+    const paragraphs = isDruskenvald
+      ? desc.split(/\n\s*\n/).map(p =>
+          `<p>${esc(p.replace(/\s+/g, ' ').trim())}</p>`
+        ).join('')
+      : `<p><strong>${esc(x.subtitulo)}.</strong>
+          ${esc(x.descricao)}</p>`;
+
+    return `
+      <div class="spread">
+        <div class="illustration">
+          <img src="${image}"
+            alt="Ilustração do domínio de ${esc(x.nome)}">
+        </div>
+        <article class="paper">
+          <div class="eyebrow">
+            DOMÍNIO ${String(index + 1).padStart(2, '0')}
+            · ${esc(x.genero)}
+          </div>
+          <h1>${esc(x.nome)}</h1>
+          ${isDruskenvald
+            ? `<p><strong>As cantigas que não terminam.</strong></p>`
+            : ''}
+          ${paragraphs}
+          <h2>Atmosfera e temas</h2>
+          <ul>
+            ${x.temas.map(t => `<li>${esc(t)}</li>`).join('')}
+          </ul>
+          <h2>Tipos de aventura</h2>
+          <ul>
+            ${x.aventuras.map(t => `<li>${esc(t)}</li>`).join('')}
+          </ul>
+          <div class="quote">
+            <strong>Uma pergunta para seu personagem</strong>
+            <p>${esc(x.pergunta)}</p>
+          </div>
+        </article>
+      </div>
+    `;
+  }
+
+  const legends = [
+    {
+      name: 'O Corpo-Seco',
+      image: 'corpo-seco.png',
+      description: `Dizem que existem mortos que a própria
+        terra se recusa a receber. Ninguém concorda
+        inteiramente sobre o motivo. Quando as árvores
+        secam sem razão e o chão parece endurecer sob
+        os pés, certos moradores preferem mudar de caminho.`
+    },
+    {
+      name: 'As Três Comadres',
+      image: 'tres-comadres.png',
+      description: `Três mulheres, três maneiras de conhecer
+        o mundo e inúmeras histórias sobre favores
+        concedidos, caminhos revelados e segredos
+        preservados. Alguns viajantes lhes devem a vida.
+        Outros aprenderam que nem toda dívida pode
+        ser paga com dinheiro.`
+    },
+    {
+      name: 'A Mula sem Cabeça',
+      image: 'mula-sem-cabeca.png',
+      description: `Nas noites em que o silêncio parece mais
+        profundo, o galope de uma criatura envolta em
+        fogo atravessa as estradas. Onde deveria haver
+        uma cabeça, há somente chamas. Muitos conhecem
+        a lenda; poucos se perguntam quem está
+        condenado a vivê-la.`
+    },
+    {
+      name: 'O Bode Preto',
+      image: 'bode-preto.png',
+      description: `Nas encruzilhadas, fala-se de um bode
+        que aparece quando alguém precisa desesperadamente
+        de alguma coisa. Há quem jure ter recebido sua
+        ajuda. Essas mesmas pessoas raramente explicam
+        o que aconteceu depois.`
+    },
+    {
+      name: 'O Auto do Boi das Sombras',
+      image: 'auto-do-boi.png',
+      description: `Uma antiga celebração reúne música,
+        máscaras, dança e a memória de um boi
+        extraordinário. Para alguns, é a festa mais
+        importante do ano. Para outros, os preparativos
+        começam cedo demais, e a alegria parece depender
+        de coisas sobre as quais ninguém deseja conversar.`
+    }
+  ];
+
+  function legendsPageHTML() {
+    return `
+      <div class="fullpage">
+        <div class="eyebrow">
+          DRUSKENVALD · HISTÓRIAS DAS VEREDAS
+        </div>
+        <h1 style="font-size:clamp(2rem,4vw,3.2rem)">
+          Lendas e desafios das veredas
+        </h1>
+        <p>
+          Em Druskenvald, cada aldeia conhece sua própria
+          versão dos acontecimentos. Algumas histórias
+          são transmitidas como advertências; outras,
+          como cantigas, orações ou simples causos
+          contados à beira do fogo. Nem sempre duas
+          pessoas concordam sobre aquilo que viram.
+        </p>
+
+        <div class="legend-gallery">
+          ${legends.map(l => `
+            <article class="legend-entry">
+              <img src="assets/${l.image}"
+                loading="lazy"
+                alt="Ilustração de ${esc(l.name)}">
+              <div>
+                <h2>${esc(l.name)}</h2>
+                <p>${esc(l.description.replace(/\s+/g, ' ').trim())}</p>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+
+        <div class="quote">
+          As histórias mudam conforme a voz que as conta.
+          O que permanece é aquilo que seus ouvintes
+          escolhem fazer depois.
+        </div>
+      </div>
+    `;
+  }
+
+  function choicesHTML() {
+    return `
+      <div class="formshell">
+        <div class="eyebrow">O LIVRO DOS DESTINOS · I</div>
+        <h1>Suas escolhas nas Brumas</h1>
+        <p class="form-intro">
+          Escolha até <strong>três domínios</strong>.
+          Estas preferências ajudam a planejar a jornada,
+          mas não determinam sozinhas o que acontecerá.
+          Suas respostas ficam salvas neste navegador
+          e podem ser baixadas no final.
+        </p>
+        <div class="form-section">
+          <h2>Qual personagem você interpreta?</h2>
+          <div class="field">
+            <label for="character">Personagem</label>
+            <select id="character">
+              <option value="">Selecione...</option>
+              ${characters.map(n => `
+                <option value="${n}"
+                  ${f.character === n ? 'selected' : ''}>
+                  ${n}
+                </option>
+              `).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label for="player">
+              Nome do jogador (opcional)
+            </label>
+            <input id="player" value="${esc(f.player)}"
+              placeholder="Seu nome">
+          </div>
+        </div>
+        <div class="form-section">
+          <h2>
+            Quais domínios mais despertam sua curiosidade?
+          </h2>
+          <div class="options">
+            ${D.map(x => `
+              <label class="option">
+                <input type="checkbox"
+                  data-domain="${x.id}"
+                  ${f.domains.includes(x.id) ? 'checked' : ''}
+                  ${f.domains.length >= 3 &&
+                    !f.domains.includes(x.id)
+                    ? 'disabled' : ''}>
+                ${esc(x.nome)}
+              </label>
+            `).join('')}
+          </div>
+          <p class="hint">
+            ${f.domains.length} de 3 selecionados.
+          </p>
+        </div>
+        <div class="form-section">
+          <h2>Que tipo de história você prefere?</h2>
+          <div class="options">
+            ${[
+              ['investigação', 'Mistérios e investigação'],
+              ['interpretação', 'Interpretação e relações'],
+              ['combate', 'Combates e estratégia'],
+              ['dilemas', 'Dilemas morais'],
+              ['equilíbrio', 'Um pouco de tudo']
+            ].map(([v, label]) => `
+              <label class="option">
+                <input type="radio" name="style"
+                  value="${v}"
+                  ${f.style === v ? 'checked' : ''}>
+                ${label}
+              </label>
+            `).join('')}
+          </div>
+          <div class="field">
+            <label for="expectation">
+              O que você mais gostaria de viver
+              na próxima fase? (opcional)
+            </label>
+            <textarea id="expectation">${esc(f.expectation)}</textarea>
+          </div>
+        </div>
+        <button class="cta" id="nextForm" type="button">
+          Continuar para o Livro dos Destinos →
+        </button>
+      </div>
+    `;
+  }
+
+  const questions = [
+    ['desired', 'O que seu personagem ainda deseja conquistar?'],
+    ['relationship', 'Existe alguém que gostaria de reencontrar, salvar, perdoar ou confrontar?'],
+    ['mystery', 'Qual mistério de seu passado gostaria de compreender?'],
+    ['fears', 'Que tipo de pessoa teme se tornar ao adquirir tanto poder?'],
+    ['after', 'Se sobrevivesse a tudo isso, como gostaria de viver depois?'],
+    ['themes', 'Que cenas, relações ou transformações gostaria de explorar?'],
+    ['boundaries', 'Há assuntos que prefere evitar ou tratar com cuidado? (opcional e confidencial ao Mestre)']
+  ];
+
+  function destinyHTML() {
+    return `
+      <div class="formshell">
+        <div class="eyebrow">O LIVRO DOS DESTINOS · II</div>
+        <h1>O que ainda resta viver?</h1>
+        <p class="form-intro">
+          Responda apenas ao que fizer sentido.
+          Você pode compartilhar detalhes em particular
+          com o Mestre. O destino do personagem ainda
+          será construído durante o jogo.
+        </p>
+        ${questions.map(([id, q]) => `
+          <div class="field">
+            <label for="${id}">${esc(q)}</label>
+            <textarea id="${id}"
+              placeholder="Escreva aqui, se desejar"
+            >${esc(f[id])}</textarea>
+          </div>
+        `).join('')}
+        <button class="cta" id="nextForm" type="button">
+          Preparar minha carta ao Mestre →
+        </button>
+      </div>
+    `;
+  }
+
+  function letterHTML() {
+    return `
+      <div class="formshell">
+        <div class="eyebrow">SEU REGISTRO PESSOAL</div>
+        <h1>A Carta ao Mestre</h1>
+        <p class="form-intro">
+          Suas respostas ficam apenas neste dispositivo.
+          Para enviá-las, baixe o arquivo ou copie o texto
+          e compartilhe diretamente com o Mestre.
+        </p>
+        <div class="form-section">
+          <h2>Prévia das respostas</h2>
+          <pre id="preview" style="
+            white-space:pre-wrap;line-height:1.55;
+            font:1rem Georgia;background:#fff8e8;
+            border:1px solid #b99871;padding:20px;
+            max-height:480px;overflow:auto"></pre>
+        </div>
+        <div class="action-row">
+          <button class="action" id="downloadTxt"
+            type="button">↓ Baixar TXT</button>
+          <button class="action secondary" id="copyText"
+            type="button">Copiar para WhatsApp</button>
+          <button class="action secondary" id="printPdf"
+            type="button">Imprimir / Salvar PDF</button>
+        </div>
+        <p id="confirmation" class="confirmation"
+          role="status"></p>
+        <p class="hint">
+          O arquivo TXT pode ser anexado a uma conversa.
+          Nenhuma resposta é enviada automaticamente.
+        </p>
+      </div>
+    `;
+  }
+
+  function menu() {
+    const m = $('#menu');
+    m.innerHTML = pages.map((label, i) => `
+      <button type="button" data-page="${i}"
+        ${i === page ? 'aria-current="page"' : ''}>
+        ${String(i + 1).padStart(2, '0')} · ${esc(label)}
+      </button>
+    `).join('');
+
+    m.querySelectorAll('[data-page]').forEach(b => {
+      b.onclick = () => {
+        goto(Number(b.dataset.page));
+        $('#sumario').classList.remove('show');
+        $('#tocToggle').setAttribute('aria-expanded', 'false');
+      };
+    });
+  }
+
+  function render() {
+    let html = '';
+
+    if (page === 0) {
+      html = `
+        <div class="fullpage coverpage">
+          <div class="eyebrow">
+            PODERES SOMBRIOS · NÍVEIS 13–20
+          </div>
+          <h1>Atlas das Brumas</h1>
+          <h2>Os Caminhos do Pavor</h2>
+          <p>
+            Sete domínios. Inúmeras histórias.
+            O próximo caminho também depende de vocês.
+          </p>
+          <button class="cta" id="start" type="button">
+            Abrir o atlas →
+          </button>
+        </div>
+      `;
+    } else if (page === 1) {
+      html = shell('Uma carta além das Brumas', `
+        <p>
+          Para <strong>Lloyd, Aunilan, Kaelion,
+          Ireena e Valerius</strong>.
+        </p>
+        <p>
+          Vocês caminharam por Baróvia, conheceram seus
+          horrores e fizeram escolhas cujas consequências
+          ainda pertencem à história. Se houver um amanhã
+          além da campanha que agora se aproxima do fim,
+          outros caminhos poderão se abrir nas Brumas.
+        </p>
+        <p>
+          Este atlas apresenta possibilidades para a
+          próxima etapa, entre os níveis 13 e 20.
+          Não contém respostas aos mistérios que cada
+          território guarda. Apresenta apenas os tipos
+          de horror e as histórias que vocês poderão
+          encontrar.
+        </p>
+        <p>
+          <strong>Vocês não precisam ler tudo.</strong>
+          Explorem as imagens, escolham até três domínios
+          que despertem interesse e contem ao Mestre
+          o que desejam viver com seus personagens.
+        </p>
+        <p>
+          As respostas serão convites à criação,
+          jamais garantias sobre o destino de alguém.
+        </p>
+        <button class="cta" id="start" type="button">
+          Conhecer os domínios →
+        </button>
+      `);
+    } else if (page === 2) {
+      html = shell('As faces do pavor', `
+        <p>
+          Cada domínio tem sua própria identidade.
+          Escolham pelo que mais desperta curiosidade —
+          e não pelo que parece mais fácil de vencer.
+        </p>
+        <div class="domain-grid">
+          ${D.map((x, i) => `
+            <a class="domain-mini"
+              href="#pagina-${i + 4}"
+              data-domain-page="${i + 3}"
+              style="text-decoration:none;color:inherit;
+                cursor:pointer"
+              aria-label="Conhecer ${esc(x.nome)}">
+              <img src="assets/${x.id}.webp"
+                loading="lazy"
+                alt="Ilustração de ${esc(x.nome)}">
+              <div>
+                <strong>${esc(x.nome)}</strong>
+                <span>${esc(x.genero)}</span>
+              </div>
+            </a>
+          `).join('')}
+        </div>
+        <p>
+          As aventuras podem conter investigação,
+          interpretação, exploração e confrontos
+          épicos em proporções diferentes.
+        </p>
+      `);
+    } else if (
+      page >= domainStart &&
+      page < domainStart + D.length
+    ) {
+      const i = page - domainStart;
+      html = domainPage(D[i], i);
+    } else if (page === legendsPage) {
+      html = legendsPageHTML();
+    } else if (page === choicesPage) {
+      html = choicesHTML();
+    } else if (page === destinyPage) {
+      html = destinyHTML();
+    } else if (page === letterPage) {
+      html = letterHTML();
+    }
+
+    stage.innerHTML = html;
+    stage.style.animation = 'none';
+    void stage.offsetWidth;
+    stage.style.animation = 'turn .22s ease';
+
+    $('#pageCount').textContent =
+      `${page + 1} / ${pages.length}`;
+
+    ['prevBtn', 'prevBottom'].forEach(id => {
+      $('#' + id).disabled = page === 0;
+    });
+    ['nextBtn', 'nextBottom'].forEach(id => {
+      $('#' + id).disabled = page === pages.length - 1;
+    });
+
+    menu();
+
+    stage.querySelectorAll('[data-domain-page]').forEach(a => {
+      a.onclick = e => {
+        e.preventDefault();
+        goto(Number(a.dataset.domainPage));
+      };
+    });
+
+    const start = $('#start');
+    if (start) start.onclick = () => goto(page + 1);
+
+    const next = $('#nextForm');
+    if (next) next.onclick = () => goto(page + 1);
+
+    if (page === choicesPage) {
+      $('#character').onchange = e => {
+        f.character = e.target.value;
+        save();
+      };
+      $('#player').oninput = e => {
+        f.player = e.target.value;
+        save();
+      };
+      $('#expectation').oninput = e => {
+        f.expectation = e.target.value;
+        save();
+      };
+
+      stage.querySelectorAll('[data-domain]').forEach(c => {
+        c.onchange = e => {
+          const id = e.target.dataset.domain;
+          f.domains = e.target.checked
+            ? [...f.domains, id].slice(0, 3)
+            : f.domains.filter(x => x !== id);
+          save();
+          render();
+        };
+      });
+
+      stage.querySelectorAll('[name="style"]').forEach(c => {
+        c.onchange = e => {
+          f.style = e.target.value;
+          save();
+        };
+      });
+    }
+
+    if (page === destinyPage) {
+      questions.forEach(([id]) => {
+        $('#' + id).oninput = e => {
+          f[id] = e.target.value;
+          save();
+        };
+      });
+    }
+
+    if (page === letterPage) {
+      $('#preview').textContent = exportText();
+      $('#downloadTxt').onclick = download;
+
+      $('#copyText').onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(exportText());
+          $('#confirmation').textContent =
+            'Respostas copiadas! Agora cole na conversa com o Mestre.';
+        } catch (e) {
+          $('#confirmation').textContent =
+            'Não foi possível copiar automaticamente. Use Baixar TXT.';
+        }
+      };
+
+      $('#printPdf').onclick = () => {
+        const win = window.open('', '_blank');
+
+        if (!win) {
+          $('#confirmation').textContent =
+            'Permita a abertura de janelas para imprimir.';
+          return;
+        }
+
+        win.document.write(
+          '<!doctype html><html lang="pt-BR">' +
+          '<meta charset="utf-8">' +
+          '<title>Carta ao Mestre</title>' +
+          '<style>body{font:16px Georgia;padding:30px;' +
+          'line-height:1.5}pre{font:16px Georgia;' +
+          'white-space:pre-wrap}</style>' +
+          '<h1>Carta ao Mestre — Atlas das Brumas</h1>' +
+          '<pre>' + esc(exportText()) + '</pre></html>'
+        );
+
+        win.document.close();
+        win.focus();
+        win.print();
+      };
+    }
+  }
+
+  function exportText() {
+    const val = s =>
+      String(s ?? '').trim() || '(não informado)';
+
+    return [
+      'PODERES SOMBRIOS — ATLAS DAS BRUMAS',
+      'LIVRO DOS DESTINOS — RESPOSTAS DO JOGADOR',
+      '========================================',
+      'Personagem: ' + val(f.character),
+      'Jogador: ' + val(f.player),
+      'Domínios escolhidos: ' +
+        (f.domains.map(id =>
+          D.find(x => x.id === id)?.nome
+        ).filter(Boolean).join(' > ') ||
+          '(nenhum selecionado)'),
+      'Tipo de aventura: ' + val(f.style),
+      'O que deseja viver: ' + val(f.expectation),
+      '',
+      'O QUE AINDA RESTA VIVER?',
+      'Desejo: ' + val(f.desired),
+      'Relações: ' + val(f.relationship),
+      'Mistérios: ' + val(f.mystery),
+      'Medos e limites morais: ' + val(f.fears),
+      'Vida após a jornada: ' + val(f.after),
+      'Experiências desejadas: ' + val(f.themes),
+      'Temas a evitar ou tratar com cuidado: ' +
+        val(f.boundaries),
+      '',
+      'Respostas fornecidas voluntariamente para ' +
+      'o planejamento da campanha veterana.'
+    ].join('\n');
+  }
+
+  function download() {
+    const blob = new Blob(
+      ['\ufeff', exportText()],
+      { type: 'text/plain;charset=utf-8' }
+    );
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+
+    a.href = url;
+    a.download =
+      'Poderes_Sombrios_Destino_' +
+      (f.character || 'Jogador')
+        .replace(/[^a-zA-Z0-9_-]/g, '_') +
+      '.txt';
+
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    $('#confirmation').textContent =
+      'Arquivo TXT criado. Envie-o ao Mestre pelo WhatsApp.';
+  }
+
+  ['prevBtn', 'prevBottom'].forEach(id => {
+    $('#' + id).onclick = () => goto(page - 1);
+  });
+
+  ['nextBtn', 'nextBottom'].forEach(id => {
+    $('#' + id).onclick = () => goto(page + 1);
+  });
+
+  $('#tocToggle').onclick = () => {
+    const on = $('#sumario').classList.toggle('show');
+    $('#tocToggle').setAttribute(
+      'aria-expanded', String(on)
+    );
+  };
+
+  window.addEventListener('keydown', e => {
+    if (/INPUT|TEXTAREA|SELECT/.test(
+      document.activeElement?.tagName || ''
+    )) return;
+
+    if (e.key === 'ArrowRight') goto(page + 1);
+    if (e.key === 'ArrowLeft') goto(page - 1);
+  });
+
+  const match = location.hash.match(/pagina-(\d+)/);
+
+  if (match) {
+    page = Math.max(
+      0,
+      Math.min(pages.length - 1, Number(match[1]) - 1)
+    );
+  }
+
+  render();
+})();
