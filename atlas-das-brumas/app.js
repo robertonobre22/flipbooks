@@ -912,3 +912,4 @@
 
   document.head.appendChild(style);
 })();
+
