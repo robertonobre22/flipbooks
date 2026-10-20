@@ -1,4 +1,5 @@
-window.ATLAS_DOMINIOS=[
+
+window.ATLAS_DOMINIOS = [
   {
     "id": "bluetspur",
     "nome": "Bluetspur",
@@ -122,21 +123,21 @@ window.ATLAS_DOMINIOS=[
   {
     "id": "druskenvald",
     "nome": "Druskenvald",
-    "genero": "Horror folclórico · maldições · florestas",
-    "subtitulo": "A lua torta",
-    "descricao": "Vilarejos mantêm costumes antigos nas margens de florestas que parecem lembrar mais do que deveriam. Lendas, promessas e rituais sobrevivem à passagem das gerações; algumas tradições protegem, outras cobram.",
+    "genero": "Horror folclórico brasileiro · causos · promessas · assombrações",
+    "subtitulo": "As cantigas que não terminam",
+    "descricao": "Nas aldeias de Druskenvald, as festas conservam cantigas antigas e as estradas guardam histórias que ninguém conta até o fim. Um assobio atravessa a mata antes do amanhecer. Sob a Lua Torta, promessas podem durar mais que uma vida — e há lugares onde todos sabem o preço de uma dívida, mas ninguém se atreve a dizer quem deve pagá-la.",
     "temas": [
-      "Lendas e superstições vivas",
-      "Pactos e promessas ancestrais",
-      "Florestas e comunidades isoladas",
-      "Culpa, tradição e pertencimento"
+      "Lendas brasileiras e assombrações nas estradas",
+      "Parlendas, presságios e segredos familiares",
+      "Festas populares, promessas e tradições antigas",
+      "Culpa, pertencimento e coragem de romper o silêncio"
     ],
     "aventuras": [
-      "Investigar maldições locais",
-      "Percorrer matas antigas",
-      "Negociar com forças feéricas",
-      "Proteger pessoas e questionar costumes"
+      "Investigar causos e desaparecimentos nas aldeias",
+      "Atravessar matas e caminhos que mudam à noite",
+      "Descobrir os segredos por trás de festas e promessas",
+      "Proteger pessoas e escolher quais tradições transformar"
     ],
-    "pergunta": "Que promessa você jamais faria, ainda que ela pudesse salvar alguém?"
+    "pergunta": "Você quebraria uma tradição que mantém sua comunidade viva se descobrisse quem paga por ela?"
   }
 ];
