@@ -1,1 +1,160 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#211819"><title>Atlas das Brumas — Poderes Sombrios</title><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#conteudo">Pular para o conteúdo</a><header class="toolbar"><a class="brand" href="../">◈ NOBRE FLIPBOOKS</a><span>ATLAS DAS BRUMAS <small>· PODERES SOMBRIOS</small></span><button id="tocToggle" type="button" aria-expanded="false" aria-controls="sumario">☰ Índice</button></header><div class="layout"><nav id="sumario" class="sumario" aria-label="Índice do atlas"><div class="nav-title">Os Caminhos do Pavor</div><div id="menu"></div><div class="nav-foot"><a href="../">← Biblioteca</a><span>Grupo veterano · Níveis 13–20</span></div></nav><main id="conteudo" tabindex="-1"><div class="book-controls"><button id="prevBtn" type="button">← Anterior</button><span id="pageCount" aria-live="polite"></span><button id="nextBtn" type="button">Próxima →</button></div><section id="bookStage" class="book" aria-live="polite"></section><div class="book-controls bottom"><button id="prevBottom" type="button">← Anterior</button><button id="nextBottom" type="button">Próxima →</button></div><footer>Atlas das Brumas · Poderes Sombrios · Lloyd, Aunilan, Kaelion, Ireena e Valerius</footer></main></div><script src="data.js"></script><script src="app.js"></script></body></html>
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211819">
+
+  <title>Atlas das Brumas — Poderes Sombrios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+  <header class="toolbar">
+    <a class="brand" href="../">
+      ◈ NOBRE FLIPBOOKS
+    </a>
+
+    <span>
+      ATLAS DAS BRUMAS
+      <small>· PODERES SOMBRIOS</small>
+    </span>
+
+    <button id="tocToggle" type="button"
+      aria-expanded="false" aria-controls="sumario">
+      ☰ Índice
+    </button>
+  </header>
+
+  <div class="layout">
+    <nav id="sumario" class="sumario"
+      aria-label="Índice do atlas">
+
+      <div class="nav-title">
+        Os Caminhos do Pavor
+      </div>
+
+      <div id="menu"></div>
+
+      <div class="nav-foot">
+        <a href="../">← Biblioteca</a>
+        <span>Grupo veterano · Níveis 13–20</span>
+      </div>
+    </nav>
+
+    <main id="conteudo" tabindex="-1">
+      <div class="book-controls">
+        <button id="prevBtn" type="button">
+          ← Anterior
+        </button>
+
+        <span id="pageCount" aria-live="polite"></span>
+
+        <button id="nextBtn" type="button">
+          Próxima →
+        </button>
+      </div>
+
+      <section id="bookStage" class="book"
+        aria-live="polite"></section>
+
+      <div class="book-controls bottom">
+        <button id="prevBottom" type="button">
+          ← Anterior
+        </button>
+
+        <button id="nextBottom" type="button">
+          Próxima →
+        </button>
+      </div>
+
+      <footer>
+        Atlas das Brumas · Poderes Sombrios ·
+        Lloyd, Aunilan, Kaelion, Ireena e Valerius
+      </footer>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const PHONE = '5571991866419';
+      const stage = document.getElementById('bookStage');
+
+      function addWhatsAppButton() {
+        const preview = stage.querySelector('#preview');
+        const actions = stage.querySelector('.action-row');
+
+        if (!preview || !actions) return;
+
+        if (stage.querySelector('#sendWhatsApp')) return;
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.id = 'sendWhatsApp';
+        button.className = 'action';
+
+        button.textContent =
+          'Enviar respostas ao Mestre pelo WhatsApp';
+
+        button.style.background = '#245c43';
+        button.style.borderColor = '#a6c7a6';
+
+        button.addEventListener('click', () => {
+          const answers = preview.textContent.trim();
+
+          if (!answers) {
+            const status = stage.querySelector('#confirmation');
+            if (status) {
+              status.textContent =
+                'Não foi possível preparar as respostas.';
+            }
+            return;
+          }
+
+          const message =
+            'Olá! Aqui estão minhas respostas ao ' +
+            'Atlas das Brumas:\n\n' + answers;
+
+          const link =
+            'https://wa.me/' + PHONE +
+            '?text=' + encodeURIComponent(message);
+
+          window.location.href = link;
+        });
+
+        actions.prepend(button);
+
+        const note = document.createElement('p');
+        note.className = 'hint';
+        note.textContent =
+          'O WhatsApp abrirá com suas respostas prontas. ' +
+          'Confira a mensagem e confirme o envio. ' +
+          'Se alguma resposta for particular, revise-a ' +
+          'antes de enviar.';
+
+        actions.after(note);
+      }
+
+      const observer = new MutationObserver(addWhatsAppButton);
+
+      observer.observe(stage, {
+        childList: true,
+        subtree: true
+      });
+
+      addWhatsAppButton();
+    })();
+  </script>
+</body>
+</html>
